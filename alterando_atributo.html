@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch</title>
+</head>
+<body>
+    <h2>Clique na chave para ligar e desligar</h2>
+    <p>
+        <img id="my_switch" onclick="changeSwitch()" src="switch_off.png" width="100px">
+    </p>
+    <script>
+        function changeSwitch() {
+            var e = document.getElementById("my_switch");
+            console.log(e.src.indexOf("on"));
+            if (e.src.indexOf("off") >= 0) {
+                e.src = "switch_on.png";
+            } else {
+                e.src = "switch_off.png";
+            }
+        }
+    </script>
+</body>
+</html>
